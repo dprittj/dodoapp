@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>DODO Login</title>
+    <!--    <link rel="stylesheet" href="/re-dodo-css-1.0/styles-homepage.css" type="text/css">-->
+    <!--    <script src="/re-dodo-scripting-1.0/dodo-home-script.js"></script>-->
+</head>
+<body>
+<header th:replace="~{fragments :: headerNav}">
+</header>
+    <div class="login">
+        <div class="usernameLogin">
+            <label for="usernameInput" class="usernameLabel">Username: </label>
+            <input type="text" name="username" id="usernameInput" />
+        </div>
+        <div class="passwordLogin">
+            <label for="passwordInput" class="passwordLabel">Password: </label>
+            <input type="password" id="passwordInput" name="password" minlength="8" required />
+        </div>
+
+        <button type="submit" name="submitUser" value="submit"> Login </button>
+    </div>
+<footer th:replace="~{fragments :: footerNav}"></footer>
+</body>
+</html>
