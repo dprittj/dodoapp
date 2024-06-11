@@ -16,31 +16,34 @@ import java.util.ArrayList;
 @RequestMapping("dodo")
 public class LoginController {
 
-    private static ArrayList<User> users = new ArrayList<>();
+    private static ArrayList<String> users = new ArrayList<>();
 
+//  render login page
     @GetMapping("login")
     public String login(){
         return "/dodo/login";
     }
 
-    @PostMapping("user")
-    public String userLogin(@RequestParam User username, User password){
+//  accept login form
+    @PostMapping("/users/user")
+    public String userLogin(@RequestParam String username, String password){
         users.add(username);
         System.out.println(users.get(0));
-        return "/dodo/user";
+        return "/dodo/users/user";
     }
-
-    @GetMapping("user")
+//  render user page after login
+    @GetMapping("/users/user")
     public String welcomeUser(Model model){
         model.addAttribute("users", users);
         String welcomeMsg = "Welcome " + users.get(0);
-        return "/dodo/user";
+        return "/dodo/users/user";
     }
 
-    @PostMapping("user/new")
+//  render new user page
+    @PostMapping("users/new")
     public String newUser(@RequestParam String newUser, String password){
 //        newUser = new User();
-        return "/dodo/user/new";
+        return "/dodo/users/new";
     }
 
 
