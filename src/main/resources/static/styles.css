@@ -1,3 +1,10 @@
+/*
+<link rel="stylesheet" href="../static/styles.css" type="text/css">
+<style>@import url('https://fonts.googleapis.com/css2?family=Jersey+15+Charted&display=swap');
+</style>
+<style>@import url('https://fonts.googleapis.com/css2?family=Jersey+15+Charted&family=Kameron:wght@400..700&display=swap');
+</style>
+*/
 
 /* GLOBAL */
 
@@ -37,6 +44,8 @@ header {
     color:black
 }
 
+/* Main Index Page */
+
 .mini-head-welcome-text {
     font-family: "Jersey 15 Charted", sans-serif;
     font-weight: 400;
@@ -70,8 +79,55 @@ button {
 .explainer-text {
     margin: 2px;
     padding: 2px;
-    
+
 }
+
+/* Login Page */
+
+.loginFormDiv {
+    margin: 4px;
+    padding: 4px;
+    font-size: 18px;
+}
+
+.usernameLogin {
+    margin: 4px;
+    padding: 4px;
+}
+
+.passwordLogin {
+    margin: 4px;
+    padding: 4px;
+}
+
+.userButtons {
+    margin: 6px;
+    padding: 2px;
+}
+
+/* New User Page */
+
+.new-user {
+    margin: 6px;
+    padding: 6px;
+    font-size: 14px;
+}
+
+.user-form {
+    margin: 6px;
+    padding: 6px;
+
+}
+
+.createButton {
+    margin: 12px;
+    padding: 4px;
+    font-size: 14px;
+    width: 33%;
+}
+
+
+
 
 
 

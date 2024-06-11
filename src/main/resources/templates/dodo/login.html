@@ -4,27 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>DODO Login</title>
-    <!--    <link rel="stylesheet" href="/re-dodo-css-1.0/styles-homepage.css" type="text/css">-->
+    <link rel="stylesheet" href="../../static/styles.css" type="text/css">
+    <style>@import url('https://fonts.googleapis.com/css2?family=Jersey+15+Charted&display=swap');
+    </style>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Jersey+15+Charted&family=Kameron:wght@400..700&display=swap');
+    </style>
     <!--    <script src="/re-dodo-scripting-1.0/dodo-home-script.js"></script>-->
 </head>
 <body>
 <header th:replace="~{fragments :: headerNav}"></header>
 
-    <div class="login">
+    <div class="loginFormDiv">
         <form method="post" action="users/user">
 
         <div class="usernameLogin">
             <label for="usernameInput" class="usernameLabel">Username: </label>
+            <br>
             <input type="text" name="username" id="usernameInput" required/>
         </div>
 
         <div class="passwordLogin">
             <label for="passwordInput" class="passwordLabel">Password: </label>
+            <br>
             <input type="password" id="passwordInput" name="password" minlength="8" required />
         </div>
 
-        <button type="submit" name="submitUser" value="Login"> Login </button>
-        <button type="submit" name="newUser" value="New User" formaction="users/new"> New User </button>
+        <button type="submit" name="submitUser" value="Login" class="userButtons"> Login </button>
+        <button type="submit" name="newUser" value="New User" formaction="users/new" class="userButtons"> New User </button>
 
         </form>
     </div>

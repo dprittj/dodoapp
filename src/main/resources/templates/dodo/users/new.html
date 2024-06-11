@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>DODO Login</title>
-    <!--    <link rel="stylesheet" href="/re-dodo-css-1.0/styles-homepage.css" type="text/css">-->
+    <link rel="stylesheet" href="../../../static/styles.css" type="text/css">
+    <style>@import url('https://fonts.googleapis.com/css2?family=Jersey+15+Charted&display=swap');
+    </style>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Jersey+15+Charted&family=Kameron:wght@400..700&display=swap');
+    </style>
     <!--    <script src="/re-dodo-scripting-1.0/dodo-home-script.js"></script>-->
 </head>
 <body>
@@ -13,25 +17,29 @@
 <div class="new-user">
     <form method="post" action="/dodo/user/new">
 
-        <div class="email-form">
-            <label for="email" class="emailLabel">E-mail: </label>
-            <input type="text" name="email" id="email" required/>
-        </div>
-
-        <div class="name-form">
+        <div class="user-form">
             <label for="firstname" class="nameLable">First Name: </label>
+            <br>
             <input type="text" id="firstname" name="firstname" required />
-
+            <br>
             <label for="lastname" class="nameLable">Last Name: </label>
+            <br>
             <input type="text" id="lastname" name="lastname" required />
         </div>
 
-        <div class="location-form">
+        <div class="user-form">
             <label for="location" class="locationLabel">Location: </label>
+            <br>
             <input type="text" name="location" id="location" required/>
         </div>
 
-        <button type="submit" name="createProfile" value="create"> Create Profile </button>
+        <div class="user-form">
+            <label for="email" class="emailLabel">E-mail: </label>
+            <br>
+            <input type="text" name="email" id="email" required/>
+        </div>
+
+        <button type="submit" name="createProfile" value="create" class="createButton"> Create Profile </button>
     </form>
 </div>
 
