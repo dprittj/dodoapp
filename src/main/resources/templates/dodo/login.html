@@ -8,20 +8,27 @@
     <!--    <script src="/re-dodo-scripting-1.0/dodo-home-script.js"></script>-->
 </head>
 <body>
-<header th:replace="~{fragments :: headerNav}">
-</header>
+<header th:replace="~{fragments :: headerNav}"></header>
+
     <div class="login">
+        <form method="post" action="/dodo/user">
+
         <div class="usernameLogin">
             <label for="usernameInput" class="usernameLabel">Username: </label>
-            <input type="text" name="username" id="usernameInput" />
+            <input type="text" name="username" id="usernameInput" required/>
         </div>
+
         <div class="passwordLogin">
             <label for="passwordInput" class="passwordLabel">Password: </label>
             <input type="password" id="passwordInput" name="password" minlength="8" required />
         </div>
 
-        <button type="submit" name="submitUser" value="submit"> Login </button>
+        <button type="submit" name="submitUser" value="Login"> Login </button>
+        <button type="submit" name="newUser" value="New User" formaction="user/new"> New User </button>
+
+        </form>
     </div>
+
 <footer th:replace="~{fragments :: footerNav}"></footer>
 </body>
 </html>
