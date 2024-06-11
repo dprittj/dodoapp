@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>Your Day Off, Day Out Home</title>
-    <link rel="stylesheet" href="../static/styles.css" type="text/css">
+    <link rel="stylesheet" th:href="@{styles.css}" type="text/css">
     <style>@import url('https://fonts.googleapis.com/css2?family=Jersey+15+Charted&display=swap');
     </style>
     <style>@import url('https://fonts.googleapis.com/css2?family=Jersey+15+Charted&family=Kameron:wght@400..700&display=swap');
@@ -16,11 +16,7 @@
 </header>
 <div class="mini-head">
     <div class="mini-head-welcome-text">
-        Welcome to your Day Off, Day Out adventure.
-    </div>
-    <div class="loginButtonDiv">
-        <label class="enterText">Login -- > </label>
-        <button type="button" class="enterButton" id="enterSite" value="Enter">Enter</button>
+        <h2 class="howToEnjoy">How to enjoy your DODO: </h2>
     </div>
 </div>
 <div class="explainer-container">
@@ -36,7 +32,10 @@
     <div class="explainer-text">
         <div class="explainer-viz"></div>
         3. Get a personalized Day Off/Day Out plan just for you!
-
+    </div>
+    <div class="loginButtonDiv">
+        <label class="enterText">Login -- > </label>
+        <button type="button" class="enterButton" id="enterSite" value="Enter">Enter</button>
     </div>
 <!--    <div class="example-container">-->
 <!--        <div class="example-dodo">Example itinerary here-->
