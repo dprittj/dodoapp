@@ -1,0 +1,79 @@
+
+/* GLOBAL */
+
+* {
+    background-color: rgb(175, 217, 254);
+    font-family: "Kameron", serif;
+    margin: 0;
+    padding: 0;
+ }
+
+/* IMPORTED FONTS */
+
+ .jersey-15-charted-regular {
+    font-family: "Jersey 15 Charted", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .kameron {
+    font-family: "Kameron", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+
+/* STYLES */
+/* BEGIN  */
+/* HERE   */
+
+
+header {
+    font-family: "Jersey 15 Charted", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 32px;
+    color:black
+}
+
+.mini-head-welcome-text {
+    font-family: "Jersey 15 Charted", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 32px;
+    color:black
+}
+
+.loginButtonDiv{
+    font-size: 18px;
+    margin: 5px;
+    padding: 5px;
+}
+
+button {
+    font-size: 18px;
+    border: solid medium rgb(100, 100, 100);
+    border-radius: 0.3em; 
+    height: 100%;
+    width: 50%;
+    background-color: rgb(147, 255, 147);
+    box-shadow: rgb(118, 118, 118) 0.5em 0.3em 0.3em 
+}
+
+.explainer-container {
+    margin: 4px;
+    padding: 4px;
+    font-size: 16px;
+}
+
+.explainer-text {
+    margin: 2px;
+    padding: 2px;
+    
+}
+
+
+
+
+ 
