@@ -1,23 +1,28 @@
 package com.dodo.dodoapp.models;
 
-import java.util.ArrayList;
-import java.util.List;
+import jakarta.persistence.*;
 
-//import static com.dodo.dodoapp.controllers.routes.LoginController.users;
-
+@Entity
 public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @Column(name = "id", nullable = false)
+    private Long id;
 
-    private static String username;
+    @Column(name = "username", nullable = false)
+    private String username;
 
-    private static String password;
+    @Column(name = "password", nullable = false)
+    private String password;
 
-    private static String email;
+    @Column(name = "email", nullable = false)
+    private String email;
 
-    private static String name;
+    @Column(name = "name", nullable = false)
+    private String name;
 
-    private static String location;
-
-    private static Integer userId;
+    @Column(name = "location", nullable = false)
+    private String location;
 
     public User(String username, String password, String email, String name, String location) {
         this.username = username;
@@ -26,58 +31,50 @@ public class User {
         this.name = name;
         this.location = location;
     }
+    public User(){ }
 
-    public User(){
+    public Long getId() {
+        return id;
+    }
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getUsername(){
         return username;
     }
-
     public String getPassword(){
         return password;
     }
-
     public String getEmail(){
         return email;
     }
-
     public String getName(){
         return name;
     }
-
     public String getLocation(){
         return location;
     }
 
-    public Integer getUserId(){
-        return userId;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
-    public static void setUsername(String username) {
-        User.username = username;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
-    public static void setPassword(String password) {
-        User.password = password;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public static void setEmail(String email) {
-        User.email = email;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public static void setName(String name) {
-        User.name = name;
+    public void setLocation(String location) {
+        this.location = location;
     }
-
-    public static void setLocation(String location) {
-        User.location = location;
-    }
-
-//    @Override
-//    public String toString(Integer userId){
-//        return
-//    }
 
 
 }
