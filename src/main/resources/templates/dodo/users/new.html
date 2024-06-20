@@ -15,14 +15,14 @@
 <header th:replace="~{fragments :: headerNav}"></header>
 
 <div class="new-user">
-    <form method="post" action="/dodo/user/new">
+    <form method="post" action="/dodo/users/create">
 
         <div class="user-form">
-            <label for="firstname" class="nameLable">First Name: </label>
+            <label for="firstname" class="nameLabel">First Name: </label>
             <br>
             <input type="text" id="firstname" name="firstname" required />
             <br>
-            <label for="lastname" class="nameLable">Last Name: </label>
+            <label for="lastname" class="nameLabel">Last Name: </label>
             <br>
             <input type="text" id="lastname" name="lastname" required />
         </div>
