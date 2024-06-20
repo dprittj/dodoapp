@@ -15,7 +15,7 @@
 <header th:replace="~{fragments :: headerNav}"></header>
 
     <div class="loginFormDiv">
-        <form method="post" action="users/user">
+        <form method="post" action="../users/user">
 
         <div class="usernameLogin">
             <label for="usernameInput" class="usernameLabel">Username: </label>
@@ -30,7 +30,7 @@
         </div>
 
         <button type="submit" name="submitUser" value="Login" class="userButtons"> Login </button>
-        <button type="submit" formaction="users/new" class="userButtons"> New User </button>
+        <button type="submit" formaction="../users/new" class="userButtons"> New User </button>
 <!--    removed from above button field:     name="newUser" value="New User"       -->
 
         </form>
