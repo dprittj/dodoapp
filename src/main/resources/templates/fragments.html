@@ -10,9 +10,9 @@
     <nav>
         <!-- <div class="navdiv"> -->
         <ul class="navlist">
-            <li><a href="/index" class="navlink">Home</a></li>
-            <li><a href="/signIn/login" class="navlink">Login</a></li>
-            <li><a href="/signIn/new" class="navlink"> New User </a></li>
+            <li><a href="/index" th:href="@{/index}" class="navlink"> Home </a></li>
+            <li><a href="/signIn/login" th:href="@{/signIn/login}" class="navlink"> Login </a></li>
+            <li><a href="/signIn/new" th:href="@{/signIn/new}" class="navlink"> New User </a></li>
 <!--            <li><a href="./usernest.html" class="navlink">Your Nest</a></li>-->
 <!--            <li><a href="./newuser.html" class="navlink">New User</a></li>-->
 <!--            <li><a href="./buildnest.html" class="navlink">New Profile</a></li>-->
@@ -23,9 +23,9 @@
 </header>
 
 <footer th:fragment="footerNav">
-    <a href="/index" class="footer-link"> Home </a>
-    <a href="/signIn/login" class="footer-link"> Login </a>
-    <a href="/signIn/new" class="footer-link"> New User </a>
+    <a href="/index" th:href="@{/index}" class="footer-link"> Home </a>
+    <a href="/signIn/login" th:href="@{/signIn/login}" class="footer-link"> Login </a>
+    <a href="/signIn/new" th:href="@{/signIn/new}" class="footer-link"> New User </a>
 <!--    <a href="./usernest.html" class="footer-link">Your Nest</a>-->
 <!--    <a href="./newuser.html" class="footer-link">New User</a>-->
 <!--    <a href="./buildnest.html" class="footer-link">New Profile</a>-->

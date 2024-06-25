@@ -20,51 +20,38 @@ public class UserController {
 //    findAll, save, findById, delete, deleteAll, deleteById, existsById, count
 //    https://youtu.be/0eug2HI7rbo?list=PLs5n5nYB22fIVO1nSiNoUTHIbQujdHYuC&t=658
 
-
-
-    //  href (button, hyperlink) resource return
-        // login page/form
-    @GetMapping("/login")
-    public String renderLogin(){
-
-        return "users/login";
-    }
-
-
-    // user page (requires login or user creation)
-    @GetMapping("/user")
+    @PostMapping("/verifiedUser")
     public String renderUserPage(){
+
+
+        // existing user validation code here!
+
         return "/users/user";
     }
 
-
-    //  html form resource return
-        // from existing-user login to user page
-    @PostMapping("/user")
-    public String userLogin(@RequestParam Model model, String username, String password){
+    @PostMapping("/createUser")
+    public String createNewUser(@RequestParam Model model, String username, String password){
         User thisUser = new User(username);
         thisUser.setPassword(password);
         model.addAttribute("username", username);
         model.addAttribute("userRepository", userRepository.save(thisUser));
-
-
         return "/users/user";
     }
 
     // from new-user button to create-user page
-    @PostMapping("/new")
-    public String renderCreateNewUser(@RequestParam String username, String password){
-        User newUser = userRepository.save(new User(username));
-        return "/users/new";
-    }
+//    @PostMapping("/new")
+//    public String renderCreateNewUser(@RequestParam String username, String password){
+//        User newUser = userRepository.save(new User(username));
+//        return "/users/new";
+//    }
 
     // from create-user page to user page
-    @PostMapping("/create")
-    public String renderCreate(@RequestParam Model model, String firstname, String lastname, String location, String email){
-        model.addAttribute("users", userRepository);
-
-        return "/users/user";
-    }
+//    @PostMapping("/create")
+//    public String renderCreate(@RequestParam Model model, String firstname, String lastname, String location, String email){
+//        model.addAttribute("users", userRepository);
+//
+//        return "/users/user";
+//    }
 
 
 

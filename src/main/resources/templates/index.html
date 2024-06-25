@@ -22,7 +22,8 @@
 <div class="explainer-container">
     <div class="explainer-text">
         <div class="explainer-viz"></div>
-        1. Login or create a free DODO user profile.
+        1. <a href="/signIn/new" th:href="@{/signIn/new}">CREATE</a> a free DODO user profile.
+        Existing users, simply <a href="/signIn/login" th:href="@{/signIn/login}" class="navlink"> LOGIN </a>!
     </div>
     <div class="explainer-text">
         <div class="explainer-viz"></div>
@@ -35,7 +36,7 @@
     </div>
     <div class="loginButtonDiv">
         <label class="enterText">Login -- > </label>
-        <button type="submit" class="enterButton" id="enterSite" formaction="users/login" value="Enter">Enter</button>
+        <button type="submit" class="enterButton" id="enterSite" formaction="signIn/login" value="Enter">Enter</button>
     </div>
 <!--    <div class="example-container">-->
 <!--        <div class="example-dodo">Example itinerary here-->
