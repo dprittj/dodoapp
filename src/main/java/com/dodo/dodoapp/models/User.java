@@ -15,25 +15,29 @@ public class User {
     @NotBlank(message = "Username required")
     @Size(min = 5, max = 12, message = "Username must be 5 - 12 characters")
     @Column(name = "username", nullable = false)
-    private String username;
+    static String username;
 
-    @NotBlank(message = "Username required")
+//    @NotBlank(message = "Password required")
     @Size(min = 8, max = 16, message = "Password must be 8 - 16 characters")
     @Column(name = "password", nullable = false)
     private String password;
 
-    @NotBlank(message = "Email address required")
+//    @NotBlank(message = "Email address required")
     @Email(message = "Invalid email address")
     @Column(name = "email", nullable = false)
     private String email;
 
-    @NotBlank(message = "Name required")
+//    @NotBlank(message = "Name required")
     @Column(name = "name", nullable = false)
     private String name;
 
-    @NotBlank(message = "Location required")
+//    @NotBlank(message = "Location required")
     @Column(name = "location", nullable = false)
     private String location;
+
+    public User(String username) {
+        this.username = username;
+    }
 
     public User(String username, String password, String email, String name, String location) {
         this.username = username;
@@ -42,7 +46,7 @@ public class User {
         this.name = name;
         this.location = location;
     }
-    public User(){ }
+    protected User(){ }
 
     public Long getId() {
         return id;
@@ -87,5 +91,6 @@ public class User {
         this.location = location;
     }
 
+//    Add @Override methods: toString(), hashcode(), and equals() !!
 
 }
