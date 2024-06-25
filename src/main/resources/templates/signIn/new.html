@@ -15,7 +15,7 @@
 <header th:replace="~{fragments :: headerNav}"></header>
 
 <div class="new-user">
-    <form method="post" action="../signIn/createUser">
+    <form method="post" action="../signIn/new">
 
         <div class="usernameLogin">
             <label for="usernameInput" class="usernameLabel" >Username: </label>
@@ -30,13 +30,13 @@
         </div>
 
         <div class="user-form">
-            <label for="firstname" class="nameLabel">First Name: </label>
+            <label for="name" class="nameLabel"> Name: </label>
             <br>
-            <input type="text" id="firstname" name="firstname" required />
-            <br>
-            <label for="lastname" class="nameLabel">Last Name: </label>
-            <br>
-            <input type="text" id="lastname" name="lastname" required />
+            <input type="text" id="name" name="name" required />
+<!--            <br>-->
+<!--            <label for="lastName" class="nameLabel">Last Name: </label>-->
+<!--            <br>-->
+<!--            <input type="text" id="lastname" name="lastName" required />-->
         </div>
 
         <div class="user-form">

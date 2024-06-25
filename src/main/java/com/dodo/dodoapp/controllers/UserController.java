@@ -29,14 +29,18 @@ public class UserController {
         return "/users/user";
     }
 
-    @PostMapping("/createUser")
-    public String createNewUser(@RequestParam Model model, String username, String password){
-        User thisUser = new User(username);
-        thisUser.setPassword(password);
-        model.addAttribute("username", username);
-        model.addAttribute("userRepository", userRepository.save(thisUser));
-        return "/users/user";
-    }
+//    @PostMapping("/signIn/new")
+//    public String createNewUser(@RequestParam Model model, String username, String password){
+//        model.addAttribute("username", username);
+//        model.addAttribute("password", password);
+//
+//        User thisUser = new User(username);
+////        model.addAttribute("userRepository", userRepository.save(thisUser));
+//        thisUser.setPassword(password);
+//        userRepository.save(thisUser);
+//
+//        return "/users/user";
+//    }
 
     // from new-user button to create-user page
 //    @PostMapping("/new")
